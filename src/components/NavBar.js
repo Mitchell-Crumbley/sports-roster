@@ -30,7 +30,7 @@ const NavBar = ({ user }) => {
 
   return (
     <div className="NavBar">
-      <Navbar light expand="md">
+      <Navbar color="light" light expand="md">
         <Link className="navbar-brand" to="/">Home</Link>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
