@@ -9,11 +9,14 @@ import {
 import PropTypes from 'prop-types';
 import { deletePlayers } from '../helpers/data/PlayerData';
 import PlayerForm from './PlayerForm';
+import '../styles/PlayerCard.scss';
+import TheRedCard from '../images/TheRedCard.gif';
 
 const PlayerCard = ({
   imageURL,
   name,
   position,
+  description,
   firebaseKey,
   setPlayers
 }) => {
@@ -46,11 +49,12 @@ const PlayerCard = ({
     <Card body>
       <CardTitle tag="h5">{name}</CardTitle>
       <CardText>Position: {position}</CardText>
-      <Button color="warning" onClick={() => handleClick('view')}>View Player</Button>
-      <Button color="danger" onClick={() => handleClick('delete')}>Delete Player</Button>
-      <Button color="info" onClick={() => handleClick('edit')}>
+      <img src={imageURL} alt="Card image cap" />
+      <Button size="sm" color="warning" onClick={() => handleClick('view')}>View Player</Button>
+      <Button size="sm"color="info" onClick={() => handleClick('edit')}>
         {editing ? 'Close Form' : 'Edit Player'}
       </Button>
+      <img className="redCard" onClick={() => handleClick('delete')} src={TheRedCard}/>
       {
         editing && <PlayerForm
           formTitle='Edit Player'
@@ -58,6 +62,7 @@ const PlayerCard = ({
           firebaseKey={firebaseKey}
           name={name}
           position={position}
+          description={description}
           imageURL={imageURL}
         />
       }
@@ -70,6 +75,7 @@ PlayerCard.propTypes = {
   name: PropTypes.string.isRequired,
   position: PropTypes.string.isRequired,
   imageURL: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
   setPlayers: PropTypes.func
 };
 

@@ -1,0 +1,26 @@
+.player-form {
+  margin: auto;
+  padding-top: 50px;
+  height: 30vmin;
+  min-width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+
+  h2 {
+    text-align: center;
+  }
+}
+
+#myVideo {
+  position: fixed;
+  min-width: 100%;
+  min-height: 0%;
+}
+
+.stack-top{
+  z-index: 9;
+  margin: 20px; /* for demo purpose  */
+}
