@@ -1,0 +1,50 @@
+.card-container {
+  display: flex;
+  justify-content: center;
+  background: none;
+
+
+.card {
+    width: 500px;
+    margin: 5px;
+  }
+
+.card-body{
+  flex: none;
+  width: 300px;
+  height: 400px;
+  margin: 25px;
+  background-color: rgb(241, 239, 239);
+  color:black;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6);
+  transition: 0.4s;
+  box-shadow: black 4px 4px;
+}
+
+img{
+  width: 250px;
+  height: 200px;
+}
+
+img.redCard {
+  height: 50px;
+  width: 75px;
+  margin: 10px;
+  border-radius: 5px;
+  position: absolute;
+  right:0;
+  bottom: 0;
+}
+
+.btn{
+  width: 120px;
+  margin-left: 5px;
+  margin-block-start: 10px;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+}
+nav.Navbar {
+  color: rgb(214, 177, 255);
+  }

@@ -2,5 +2,31 @@
 @import 'variables';
 
 body {
-  background-color: $favColor;
+  background-color: black;
+  background-image: url("https://storage.coverr.co/videos/DXbdNlYYX01pqJlb1SnXT00XyKmz76qMMy?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6Ijg3NjdFMzIzRjlGQzEzN0E4QTAyIiwiaWF0IjoxNjIwNDQ5MzM5fQ.3O0WpsvbY7-YuKp1TaV2gKKJ7ucEtUWQ4bZYQhZQRa8");
+}
+
+#myVideo {
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+#navBar{
+  position: absolute; 
+  left:0;
+  bottom: 0;
+}
+
+.stack-top{
+  z-index: 9;
+  margin: 20px; /* for demo purpose  */
+}
+
+.delete-button.btn {
+  border: none;
+  height: 15px;
+  position: absolute; 
+  left:0;
+  bottom: 0;
 }

@@ -10,6 +10,7 @@ import {
   Button
 } from 'reactstrap';
 import { signInUser, signOutUser } from '../helpers/data/auth';
+import '../styles/NavBar.scss';
 
 const NavBar = ({ user }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,8 +29,8 @@ const NavBar = ({ user }) => {
   );
 
   return (
-    <div>
-      <Navbar color="light" light expand="md">
+    <div className="NavBar">
+      <Navbar light expand="md">
         <Link className="navbar-brand" to="/">Home</Link>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>

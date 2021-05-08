@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import {
-  Button, Form, FormGroup, Label, Input
+  Button, Form, FormGroup, Label, Input, Card
 } from 'reactstrap';
 import PropTypes from 'prop-types';
+import '../styles/PlayerForm.scss';
 import { addPlayer, updatePlayers } from '../helpers/data/PlayerData';
 
 const PlayerForm = ({
@@ -42,6 +43,7 @@ const PlayerForm = ({
         name: '',
         position: '',
         imageURL: '',
+        description: '',
         firebaseKey: null,
         uid: null,
       });
@@ -49,7 +51,9 @@ const PlayerForm = ({
   };
 
   return (
-    <div className='player-form'>
+    <>
+    <div className='player-form stack-top'>
+    <Card body>
       <Form id='addPlayerForm' autoComplete='off' onSubmit={handleSubmit}>
         <h2>{formTitle}</h2>
         <FormGroup>
@@ -88,9 +92,26 @@ const PlayerForm = ({
           />
         </FormGroup>
 
+        <FormGroup>
+          <Label for="Description">Player Description:</Label>
+          <Input
+            name='Description'
+            id='description'
+            value={player.description}
+            type='text'
+            placeholder='Enter an Description'
+            onChange={handleInputChange}
+          />
+        </FormGroup>
+
         <Button type='submit'>Submit</Button>
       </Form>
+      </Card>
     </div>
+    <video autoPlay muted loop id="myVideo">
+        <source src="https://media.istockphoto.com/videos/soccer-entering-stadium-from-players-zone-video-id590128712" type="video/mp4"/>
+    </video>
+    </>
   );
 };
 
@@ -98,6 +119,7 @@ PlayerForm.propTypes = {
   formTitle: PropTypes.string.isRequired,
   setPlayers: PropTypes.func,
   name: PropTypes.string,
+  description: PropTypes.string,
   position: PropTypes.string,
   imageURL: PropTypes.string,
   firebaseKey: PropTypes.string,

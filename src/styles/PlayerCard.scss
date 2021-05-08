@@ -1,0 +1,63 @@
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-content: center;
+}
+
+.btn.btn-danger{
+  position: fixed;
+  right: 5%;
+}
+
+.card-container {
+  display: flex;
+  flex-flow: row wrap;
+  position: absolute;
+  width: 100%;
+  float: none;
+  align-items: center; 
+
+
+.card {
+    width: 700px;
+    margin: 0 auto;
+    float: none;
+  }
+
+.card-body{
+  flex: none;
+  width: 600px;
+  height: 800px;
+  margin: 25px;
+  background-color: lightgray;
+  color:black;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6);
+  transition: 0.4s;
+  box-shadow: black 2px 2px;
+}
+
+img{
+  width: 250px;
+  height: 200px;
+}
+
+img.redCard {
+  height: 50px;
+  width: 75px;
+  margin: 10px;
+  border-radius: 5px;
+  position: absolute;
+  right:0;
+  bottom: 0;
+}
+
+.btn{
+  width: 120px;
+  margin-left: 5px;
+  margin-block-start: 10px;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+}
